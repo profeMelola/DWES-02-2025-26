@@ -1,5 +1,6 @@
 # Programación web con Jakarta EE
 
+<img width="314" height="282" alt="image" src="https://github.com/user-attachments/assets/b34f2ba1-eb88-41ac-9744-a08506b4d6d8" />
 
 
 ___
