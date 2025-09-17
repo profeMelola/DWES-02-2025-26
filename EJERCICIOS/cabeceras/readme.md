@@ -1,6 +1,6 @@
 # Vamos a ver las cabeceras de un request Http
 
-''' 
+```
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -70,4 +70,4 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     }
 }
 
-''' 
+``` 
