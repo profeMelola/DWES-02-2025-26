@@ -45,7 +45,7 @@
 
 Corrige el error que sale al hacer clic en el primer enlace de la página index.html.
 
-![image](https://github.com/user-attachments/assets/6e7c680b-a336-4d27-9727-e9611f18818d)
+<img width="765" height="402" alt="image" src="https://github.com/user-attachments/assets/37312f4d-8ddf-4348-b1a3-dc9ea8690e50" />
 
 
 En vez de que salga el error, que el servlet devuelva un mensaje indicando que el código no puede ser nulo.
