@@ -1,77 +1,118 @@
-# Jakarta Sever Pages. JSP
-
-![image](https://github.com/user-attachments/assets/fd2fe72d-70bc-471f-91c2-828f78814445)
+# Jakarta Server Pages (JSP)
 
 https://jakarta.ee/specifications/pages/
 
-Las páginas JSP son archivos con la extensión jsp que contienen etiquetas HTML y XML junto con código Java incrustado.
+## ¿Qué es JSP?
+
+**Jakarta Server Pages (JSP)** es una tecnología basada en Java que permite crear páginas web dinámicas.  
+Se ejecuta en el **servidor** (dentro de un contenedor como Tomcat, Jetty, GlassFish, etc.) y genera **HTML** que se envía al navegador del cliente.
+
+
+- Combina **HTML + Java** en un mismo archivo.
+- Se traduce a un **servlet Java** por el servidor de aplicaciones.
+- Facilita separar la lógica de presentación del código Java.
 
 Los archivos JSP se crean dentro de la carpeta webapp. 
 
-Cuando el contenedor web recibe una petición HTTP hacia un JSP utiliza un motor JSP para convertir internamente el JSP a servlet y procesar la petición.
+---
 
-Las etiquetas JSP permiten utilizar código Java:
+## Estructura Básica de un JSP
 
-<img src="https://github.com/user-attachments/assets/df72882e-4714-4138-a8be-13c909901161" height="200px"/>
+Un archivo JSP suele tener la extensión `.jsp`.
 
+Ejemplo mínimo:
 
+```jsp
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hola JSP</title>
+</head>
+<body>
+    <h1>¡Hola desde JSP!</h1>
+    <p>La hora actual es: <%= new java.util.Date() %></p>
+</body>
+</html>
+```
 
-## 1. Directivas
-Las directivas proporcionan información sobre el contenido de la página JSP y afectan el procesamiento de la página.
+---
 
-### Page Directive: Define atributos que afectan el comportamiento de la página completa.
+## Elementos clave en JSP
+
+### Expresiones 
 
 ```
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<p>El resultado de 2 + 3 es: <%= 2 + 3 %></p>
+```
+  
+### Scriplets
+
+```
+<%
+    int contador = 5;
+    out.println("El contador vale: " + contador);
+%>
+
 ```
 
-- language: El lenguaje utilizado, típicamente "java".
-- contentType: El tipo de contenido de la respuesta, por ejemplo, "text/html".
-- pageEncoding: La codificación de caracteres usada en la página.
+### Declaraciones
 
-### Include Directive: Incluye el contenido de un archivo en la página actual en tiempo de compilación.
+```
+<%! 
+    int suma(int a, int b) {
+        return a + b;
+    }
+%>
+
+<p>La suma de 4 y 7 es: <%= suma(4, 7) %></p>
+
+```
+
+---
+
+## Directivas de JSP
+
+### Directiva page
+
+```
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" import="java.util.*" %>
+
+```
+
+### Directiva include
 
 ```
 <%@ include file="header.jsp" %>
-```
-
-### Taglib Directive: Declara bibliotecas de etiquetas personalizadas.
 
 ```
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-```
 
-## 2. Scripting Elements
-Son fragmentos de código Java que se insertan en una página JSP.
-
-### Declarations: Definen variables y métodos que pueden ser usados en toda la página.
-
-<%! 
-  int add(int a, int b) {
-    return a + b;
-  }
-%>
-
-### Scriptlets: Código Java que se ejecuta en tiempo de solicitud.
+### Directiva taglib
 
 ```
-<% 
-  String name = "Mundo"; 
-  out.println("Hola, " + name);
-%>
-```
-
-No puedes declarar un método dentro de un scriptlet.
-
-Los scriptlets contienen bloques de código Java que se ejecutan dentro del método service() de la página JSP, por lo que cualquier declaración dentro de ellos es local al cuerpo de ese método y no puedes definir un método de esa manera.
-
-### Expressions: Expresiones Java que se evalúan y se insertan directamente en el flujo de salida.
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 ```
-<%= new java.util.Date() %>
+---
+
+## Acciones JSP
+
+<jsp:include> → incluye contenido dinámicamente.
+
+<jsp:forward> → redirige a otra página.
+
+<jsp:useBean> → trabaja con JavaBeans.
+
+```
+<jsp:useBean id="usuario" class="com.ejemplo.Usuario" scope="session" />
+<jsp:setProperty name="usuario" property="nombre" value="Ana" />
+<p>Bienvenida, <jsp:getProperty name="usuario" property="nombre" />!</p>
+
 ```
 
-## 3. Declaración de Objetos Implicitos: JSP proporciona objetos implícitos para interactuar con la solicitud, respuesta, sesión y contexto de aplicación:
+--- 
+## Declaración de Objetos Implicitos: JSP proporciona objetos implícitos para interactuar con la solicitud, respuesta, sesión y contexto de aplicación:
 
 Al igual que en los servlets desde JSP también es posible acceder a la petición request y otros objetos implícitos.
 
@@ -83,71 +124,20 @@ Al igual que en los servlets desde JSP también es posible acceder a la petició
 - **config:** Representa la configuración del servlet.
 - **pageContext:** Proporciona un contexto de página más amplio.
 
-## 4. Uso de JavaBeans
+--- 
 
-Un objeto JavaBean o bean es un objeto instanciado cuya clase cumple:
-- Implementa la interfaz Serializable
-- Tiene constructor vacío 
-- Métodos getter y setter 
+## Expresiones EL en JSP
 
-Se utilizan para conectar los controles de los formularios a los datos del bean.
 
-![image](https://github.com/user-attachments/assets/c6cea6cb-656e-482c-a078-e5f2ea59c6b6)
+<img width="662" height="462" alt="image" src="https://github.com/user-attachments/assets/a6406c1d-84b3-4b8b-865a-258efd90f5e2" />
 
-### Malas prácticas con JavaBeans
+---
 
-```
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.ejemplo.Usuario" %>
-<html>
-<head>
-    <title>Ejemplo de JavaBean en JSP</title>
-</head>
-<body>
+## Buenas prácticas
 
-<% 
-    // Crear una instancia del JavaBean
-    Usuario usuario = new Usuario();
-    
-    // Establecer propiedades
-    usuario.setNombre("Juan");
-    usuario.setEdad(30);
-    
-    // Obtener propiedades
-    String nombre = usuario.getNombre();
-    int edad = usuario.getEdad();
-%>
-
-<h1>Detalles del Usuario</h1>
-<p>Nombre: <%= nombre %></p>
-<p>Edad: <%= edad %></p>
-
-</body>
-</html>
-
-```
-
-### Buenas prácticas con JavaBeans
-
-```
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.ejemplo.Usuario" %>
-<html>
-<head>
-    <title>Ejemplo de JavaBean en JSP</title>
-</head>
-<body>
-
-<jsp:useBean id="usuario" class="com.ejemplo.Usuario" scope="session">
-    <jsp:setProperty name="usuario" property="nombre" value="Juan"/>
-    <jsp:setProperty name="usuario" property="edad" value="30"/>
-</jsp:useBean>
-
-<h1>Detalles del Usuario</h1>
-<p>Nombre: <jsp:getProperty name="usuario" property="nombre"/></p>
-<p>Edad: <jsp:getProperty name="usuario" property="edad"/></p>
-
-</body>
-</html>
-
-```
+- Evitar lógica compleja en JSP → usar Servlets o Beans.
+- Usar JSTL y Expresiones EL (${...}) en lugar de scriptlets.
+- Separar:
+  - Presentación → JSP
+  - Lógica de negocio → Java (servlets, servicios).
+  - Usar codificación UTF-8 siempre para evitar problemas de caracteres.
