@@ -130,17 +130,15 @@ Al igual que en los servlets desde JSP también es posible acceder a la petició
 
 ### ${param}
 
-param es un mapa implícito (Map<String, String>) disponible en EL.
-
-Cada clave es el nombre de un parámetro del request (lo que envía un formulario o query string).
+- param es un mapa implícito (Map<String, String>) disponible en EL.
+- Cada clave es el nombre de un parámetro del request (lo que envía un formulario o query string).
 
 ### ${paramValues}
 
-paramValues es otro mapa implícito (Map<String, String[]>).
+- paramValues es otro mapa implícito (Map<String, String[]>).
+- Sirve cuando un parámetro puede tener varios valores, por ejemplo en un <select multiple> o en varios checkboxes con el mismo name.
+- Devuelve un array de Strings (String[]).
 
-Sirve cuando un parámetro puede tener varios valores, por ejemplo en un <select multiple> o en varios checkboxes con el mismo name.
-
-Devuelve un array de Strings (String[]).
 
 ### Otros
 
