@@ -33,6 +33,8 @@ Si se ha rellenado correctamente el formulario, el servlet debe devolver esta p√
 
 # FASE II
 
+### Mostrar el listado de errores y los mensajes de error en cada campo y no perder datos introducidos en el formulario
+
 <img width="512" height="854" alt="image" src="https://github.com/user-attachments/assets/a4631f7f-f4bd-48f5-82cd-56a739a9d727" />
 
 #  <img width="42" height="38" alt="image" src="https://github.com/user-attachments/assets/8a3ef190-e17d-4ec8-84b0-f1f6c8757d9f" /> FASE III: Bootstrap
