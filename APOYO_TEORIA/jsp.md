@@ -136,7 +136,7 @@ Al igual que en los servlets desde JSP también es posible acceder a la petició
 ### ${paramValues}
 
 - paramValues es otro mapa implícito (Map<String, String[]>).
-- Sirve cuando un parámetro puede tener varios valores, por ejemplo en un <select multiple> o en varios checkboxes con el mismo name.
+- Sirve cuando un parámetro puede tener varios valores, por ejemplo en un select multiple o en varios checkboxes con el mismo name.
 - Devuelve un array de Strings (String[]).
 
 
