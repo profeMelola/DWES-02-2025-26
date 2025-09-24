@@ -14,7 +14,7 @@ Aquí tienes código que te servirá de ayuda:
 
 ```
 
-Crea una página **login.html** con un formulario que use el método post para enviar un login y password de usuario.
+Usa la página **login.html** que contiene un formulario que usa el método post para enviar un login y password de usuario.
 
 Si introducimos mal el login y password se monstrará el error en el navegador:
 
