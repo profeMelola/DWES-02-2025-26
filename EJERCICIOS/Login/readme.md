@@ -1,4 +1,4 @@
-## Ejercicio 5.2: vamos a crear un **LoginServlet** que simula el login de un usuario.
+## Vamos a crear un **LoginServlet** que simula el login de un usuario.
 
 En el caso de que no coincida con unos valores constantes, deberá devolver un código de error 401 como que no está autorizado.
 
