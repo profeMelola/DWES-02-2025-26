@@ -1,4 +1,4 @@
-# Vamos a ver las cabeceras de un request Http
+# Cabeceras de request Http
 
 ```
 @Override
@@ -70,4 +70,38 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     }
 }
 
-``` 
+```
+
+Mejora el proyecto usando JSP.
+
+# Cabeceras de Response Http
+
+## Generar informe de productos XLS
+
+Vamos a exportar productos a dos formatos diferentes: html y css
+- Usaremos **productos.jsp** para generar el HTML.
+- Usaremos la cabecera apropiada:
+  ´´´
+              // Poner el mime type adecuado
+            response.setContentType("application/vnd.ms-excel");
+            response.setHeader("Content-Disposition","attachment;filename=products.xsl");
+  ´´´
+
+Vamos a exportar los productos a un archivo XSL sencillo, una tabla con datos.
+
+Tenemos que crear un nuevo servlet, controlador, llamado **ProductoXLSServlet** donde usaremos el método doPost para tal fin.
+
+Si queremos trabajar con xsl de una forma más compleja debemos utilizar una API específica, por ejemplo, con Apache POI es una API Java para importar y exportar datos para documentos Microsoft(Excel, Word, Project, etc.)...
+
+**Pasos:**
+
+1. Creamos clase Producto.
+2. Creamos los servicios ProductoService (interface) y ProductoServiceImpl con datos fijos, no cogidos de una base de datos.
+3. Creamos el controlador, ProductoXslServlet.
+4. En el navegador ponemos la ruta al servlet con la extensión xsl y por código detecta que va a generar un xsl en vez de un html:
+@WebServlet({"/productos.xls", "/productos.html", "/productos"})
+
+OJO!!! No es una extensión real. Es simplemente el nombre que le hemos dados, no hace falta que tenga el .xls, podría haberlo llamado productosXSL….
+
+<img width="404" height="169" alt="image" src="https://github.com/user-attachments/assets/25c48d4f-225e-4df5-99eb-45ff120312de" />
+
