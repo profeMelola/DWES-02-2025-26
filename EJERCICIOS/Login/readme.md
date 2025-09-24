@@ -16,11 +16,15 @@ Aquí tienes código que te servirá de ayuda:
 
 Usa la página **login.html** que contiene un formulario que usa el método post para enviar un login y password de usuario.
 
+___
+
 Si introducimos mal el login y password se monstrará el error en el navegador:
 
 <img width="289" height="153" alt="image" src="https://github.com/user-attachments/assets/57666532-83bb-435d-9122-e11cbca20333" />
 
 **Códigos de estado de respuesta HTTP:** https://developer.mozilla.org/es/docs/Web/HTTP/Status
+
+___
 
 Si coinciden, aparecerá un página html con el mensaje de éxito:
 
