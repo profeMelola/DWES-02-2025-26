@@ -1,4 +1,4 @@
-## Vamos a crear un **LoginServlet** que simula el login de un usuario.
+# Vamos a crear un **LoginServlet** que simula el login de un usuario.
 
 En el caso de que no coincida con unos valores constantes, deberá devolver un código de error 401 como que no está autorizado.
 
@@ -45,4 +45,4 @@ try(PrintWriter out = response.getWriter()){
             }
 ```
 
-## Modifica este proyecto para usar una JSP que indique que se ha iniciado la sesión con éxito
+## AMPLIACIÓN: Modifica este proyecto para usar una JSP que indique que se ha iniciado la sesión con éxito
