@@ -1,4 +1,25 @@
-# Cabeceras de request Http
+# PROYECTO CabecerasApp
+
+## Página index.html del proyecto. Sigue las indicaciones del ejercicio 1 y 2
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeceras</title>
+</head>
+<body>
+    <h1>TRABAJANDO CON CABECERAS HTTP</h1>
+    <p><a href="cabeceras-request-jsp">Obtener información de la cabecera HTTP (request)</a></p>
+    <p><a href="productos.xls">Exportar a XLS</a></p>
+    <p><a href="productos.html">Exportar a HTML</a></p>
+</body>
+</html>
+```
+
+## EJERCICIO 1: Cabeceras de request Http
 
 ```
 @Override
@@ -74,9 +95,9 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 Mejora el proyecto usando JSP.
 
-# Cabeceras de Response Http
+## EJERCICIO 2:Cabeceras de Response Http
 
-## Generar informe de productos XLS
+### Generar informe de productos XLS
 
 Vamos a exportar productos a dos formatos diferentes: html y css
 - Usaremos **productos.jsp** para generar el HTML.
