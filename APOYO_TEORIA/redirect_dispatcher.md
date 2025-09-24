@@ -21,10 +21,10 @@ public class RedirigirServlet extends HttpServlet {
 public class DespacharServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // Forma 1 (recomendado)
+        // Forma 1: la ruta siempre debe ser absoluta respecto al contexto de la aplicación 
         getServletContext().getRequestDispatcher("/productos").forward(req, resp);
 
-        // Forma 2
+        // Forma 2: la ruta puede ser relativa al servlet actual. Si empieza con / será absoluta y si no empieza con / es relativa al path del servlet actual
         request.getRequestDispatcher("/productos").forward(req, resp);
 
     }
