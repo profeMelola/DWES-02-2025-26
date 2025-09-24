@@ -19,7 +19,7 @@
 </html>
 ```
 
-## EJERCICIO 1: Cabeceras de request Http
+## EJERCICIO 1: cabeceras de request Http
 
 ```
 @Override
@@ -95,7 +95,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 Mejora el proyecto usando JSP.
 
-## EJERCICIO 2:Cabeceras de Response Http
+## EJERCICIO 2: cabeceras de Response Http
 
 ### Generar informe de productos XLS
 
