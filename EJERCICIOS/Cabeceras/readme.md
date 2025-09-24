@@ -126,3 +126,21 @@ OJO!!! No es una extensión real. Es simplemente el nombre que le hemos dados, n
 
 <img width="404" height="169" alt="image" src="https://github.com/user-attachments/assets/25c48d4f-225e-4df5-99eb-45ff120312de" />
 
+## EJERCICIO 3: mostrar la hora actualizada
+
+<img width="652" height="306" alt="image" src="https://github.com/user-attachments/assets/b40708d2-9413-4717-9421-7ad1f0110cd9" />
+
+Crearemos un nuevo servlet llamado **HoraActualizadaServlet**
+
+En él aprenderemos a usar el siguiente código:
+
+```
+        resp.setHeader("refresh", "1");
+        LocalTime hora = LocalTime.now();
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("hh:mm:ss");
+
+        ...
+
+        hora.format(df)
+
+```
