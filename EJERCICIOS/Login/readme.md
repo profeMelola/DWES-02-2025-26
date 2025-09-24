@@ -30,7 +30,7 @@ Si coinciden, aparecerá un página html con el mensaje de éxito:
 
 <img width="266" height="133" alt="image" src="https://github.com/user-attachments/assets/898f760f-0d60-4928-bae2-9108531d73a8" />
 
-´´´
+```
 try(PrintWriter out = response.getWriter()){
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
@@ -43,6 +43,6 @@ try(PrintWriter out = response.getWriter()){
                 out.println("   </body>");
                 out.println("</html>");
             }
-´´´
+```
 
 ## Modifica este proyecto para usar una JSP que indique que se ha iniciado la sesión con éxito
