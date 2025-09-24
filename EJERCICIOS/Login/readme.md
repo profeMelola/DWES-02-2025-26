@@ -18,8 +18,9 @@ Crea una página **login.html** con un formulario que use el método post para e
 
 Si introducimos mal el login y password se monstrará el error en el navegador:
 
+<img width="289" height="153" alt="image" src="https://github.com/user-attachments/assets/57666532-83bb-435d-9122-e11cbca20333" />
 
 
 Si coinciden, aparecerá un página html con el mensaje de éxito:
 
-
+<img width="266" height="133" alt="image" src="https://github.com/user-attachments/assets/898f760f-0d60-4928-bae2-9108531d73a8" />
