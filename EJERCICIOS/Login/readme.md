@@ -20,7 +20,7 @@ Si introducimos mal el login y password se monstrará el error en el navegador:
 
 <img width="289" height="153" alt="image" src="https://github.com/user-attachments/assets/57666532-83bb-435d-9122-e11cbca20333" />
 
-**Códigos de estado de respuesta HTTP: **https://developer.mozilla.org/es/docs/Web/HTTP/Status
+**Códigos de estado de respuesta HTTP:** https://developer.mozilla.org/es/docs/Web/HTTP/Status
 
 Si coinciden, aparecerá un página html con el mensaje de éxito:
 
