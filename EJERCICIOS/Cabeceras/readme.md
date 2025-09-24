@@ -81,11 +81,11 @@ Mejora el proyecto usando JSP.
 Vamos a exportar productos a dos formatos diferentes: html y css
 - Usaremos **productos.jsp** para generar el HTML.
 - Usaremos la cabecera apropiada:
-  ´´´
+  ```
               // Poner el mime type adecuado
             response.setContentType("application/vnd.ms-excel");
             response.setHeader("Content-Disposition","attachment;filename=products.xsl");
-  ´´´
+  ```
 
 Vamos a exportar los productos a un archivo XSL sencillo, una tabla con datos.
 
