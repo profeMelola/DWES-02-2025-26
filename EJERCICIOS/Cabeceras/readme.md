@@ -113,9 +113,9 @@ Vamos a exportar productos a dos formatos diferentes: html y css
 
 Vamos a exportar los productos a un archivo XSL sencillo, una tabla con datos.
 
-Tenemos que crear un nuevo servlet, controlador, llamado **ProductoXLSServlet** donde usaremos el método doPost para tal fin.
+Tenemos que crear un nuevo servlet, controlador, llamado **ProductoXLSServlet**.
 
-Si queremos trabajar con xsl de una forma más compleja debemos utilizar una API específica, por ejemplo, con Apache POI es una API Java para importar y exportar datos para documentos Microsoft(Excel, Word, Project, etc.)...
+Si queremos trabajar con xsl de una forma más compleja necesitaremos utilizar una API específica, por ejemplo, con Apache POI es una API Java para importar y exportar datos para documentos Microsoft(Excel, Word, Project, etc.)...
 
 **Pasos:**
 
