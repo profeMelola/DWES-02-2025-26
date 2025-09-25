@@ -1,12 +1,15 @@
 # Ejemplo: login de usuario con JakartaEE
 
-## Arquitectura 3 capas a nivel lógico.
+## Arquitectura 3
 
 Esta arquitectura divide la aplicación en diferentes capas físicas o lógicas, donde cada capa tiene una responsabilidad específica. 
 
 Las capas típicas incluyen la capa de presentación, la capa de lógica de negocio y la capa de acceso a datos. 
 
 Cada capa se comunica con la capa adyacente a través de interfaces bien definidas. 
+
+
+## Arquitectura 3 capas a nivel lógico.
 
 **Separación en las capas a nivel lógico:**
 - **Presentación:** JSP
@@ -71,6 +74,13 @@ ___
 
 ## Arquitectura 3 capas a nivel físico.
 
+- **Capa de presentación:** JSP (o HTML/JS en cliente).
+- **Capa de lógica de negocio (Servidor de aplicaciones):** aquí van el Servlet y también la clase utilitaria del ejemplo anterior.
+  - El Servlet gestiona la petición/respuesta.
+  - La clase utilitaria hace las consultas, pero sigue formando parte de la lógica de aplicación, porque el servidor de aplicaciones es el que sabe hablar con la BD.
+- **Capa de datos (Servidor de BD):** el motor de base de datos real (MySQL, PostgreSQL, etc.), que puede estar en otro equipo físico distinto.
+
+<img width="415" height="236" alt="image" src="https://github.com/user-attachments/assets/9de56ef4-5bb8-4a9a-b1be-8596abc56e01" />
 
 ___
 
