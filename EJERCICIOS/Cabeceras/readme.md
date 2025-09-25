@@ -13,7 +13,7 @@ Añade a tu proyecto la página **index.html** y sigue las indicaciones del ejer
 </head>
 <body>
     <h1>TRABAJANDO CON CABECERAS HTTP</h1>
-    <p><a href="cabeceras-request-jsp">Obtener información de la cabecera HTTP (request)</a></p>
+    <p><a href="cabeceras-request">Obtener información de la cabecera HTTP (request)</a></p>
     <p><a href="productos.xls">Exportar a XLS</a></p>
     <p><a href="productos.html">Exportar a HTML</a></p>
 </body>
