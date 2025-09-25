@@ -71,7 +71,7 @@ Por defecto, el dominio de la cookie será el obtenido del contexto del servlet.
 
 Para limitar que la cookie queda limitada a toda la app y no se comparte con otras apps: cookie.setPath(request.getContextPath());
 
-<img width="526" height="623" alt="image" src="https://github.com/user-attachments/assets/6857a2c7-9201-4891-b0d8-9dcfb225833d" />
+<img width="250" height="300" alt="image" src="https://github.com/user-attachments/assets/6857a2c7-9201-4891-b0d8-9dcfb225833d" />
 
 
 **Para leer la cookie, el servlet recibiría todas las cookies en el HttpServletRequest:**
