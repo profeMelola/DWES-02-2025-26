@@ -12,7 +12,15 @@ ___
 
 <img width="784" height="581" alt="image" src="https://github.com/user-attachments/assets/6ff31d43-be66-4336-84cf-4948da2da3d3" />
 
+___
 
+<img width="207" height="146" alt="image" src="https://github.com/user-attachments/assets/a3b824e6-7b54-4b9f-a2a9-bc602d371d24" /> Entonces...¿Por qué en nuestra index2.jsp del ejercicio del formulario tenemos el siguiente código?
+
+```
+    // si no viaje el username en el request será null
+    String usernameVal = request.getParameter("username") != null?request.getParameter("username"):"";
+```
+___
 # sendRedirect vs Dispatcher forward
 
 Podemos redirigir de diferentes maneras:
