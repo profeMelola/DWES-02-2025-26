@@ -1,6 +1,6 @@
 # Ejemplo: login de usuario con JakartaEE
 
-## Arquitectura 3 capas
+## Arquitectura 3 capas a nivel lógico.
 
 Esta arquitectura divide la aplicación en diferentes capas físicas o lógicas, donde cada capa tiene una responsabilidad específica. 
 
@@ -8,7 +8,7 @@ Las capas típicas incluyen la capa de presentación, la capa de lógica de nego
 
 Cada capa se comunica con la capa adyacente a través de interfaces bien definidas. 
 
-Separación en las capas:
+**Separación en las capas a nivel lógico:**
 - **Presentación:** JSP
 - **Lógica de negocio:** Servlet -> lógica
 - **Datos:** Clase DB -> acceso a datos
@@ -66,6 +66,11 @@ public class DBUtils {
 }
 
 ```
+
+___
+
+## Arquitectura 3 capas a nivel físico.
+
 
 ___
 
