@@ -1,7 +1,8 @@
 # PROYECTO CabecerasApp
 
-## Página index.html del proyecto. Sigue las indicaciones del ejercicio 1 y 2
+## Crea el proyecto
 
+Añade a tu proyecto la página **index.html** y sigue las indicaciones del ejercicio 1 y 2.
 ```
 <!DOCTYPE html>
 <html lang="en">
