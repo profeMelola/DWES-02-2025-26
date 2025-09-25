@@ -96,6 +96,8 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 ### AMPLIACIÓN: mejora el proyecto usando JSP.
 
+___
+
 ## EJERCICIO 2: cabeceras de Response Http
 
 ### Generar informe de productos XLS
