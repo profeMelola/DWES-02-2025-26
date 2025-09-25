@@ -65,11 +65,10 @@ ___
 
 ## Patrón MVC con JSP + Servlets
 
-Se afina la separación interna:
-- Definir interfaces DAO (con operaciones CRUD).
-- Tener clases de implementación DAO que saben hablar con la BD (JDBC, JPA, Hibernate, etc.).
-- El Modelo (clases de negocio, como Usuario) no debería saber cómo se accede a los datos, solo usar el DAO.
-- El Controlador (Servlet) no mete SQL ni lógica de BD, solo coordina: recibe datos del usuario, llama al modelo/DAO y selecciona la vista.
+- **Modelo (Usuario):** solo representa los datos del negocio.
+  - **DAO (UsuarioDAO + UsuarioDAOImpl):** define y encapsula el acceso a datos (puedes cambiar JDBC por JPA sin que el resto cambie).
+- **Controlador (LoginController):** recibe la petición, crea el modelo, llama al DAO y decide la vista.
+- **Vista (JSPs):** solo muestra información, sin lógica.
 
 ### 1. Modelo 
 
