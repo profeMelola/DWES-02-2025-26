@@ -1,3 +1,9 @@
+# Parámetros en request Http
+
+En el servlet con request.getParameter("..."):
+- Si el campo estaba en el formulario con name pero vacío → devuelve cadena vacía ("").
+- Si el campo no se envió en absoluto (porque no tenía name, o era un checkbox no marcado, o un radio button no seleccionado) → devuelve null.
+
 # sendRedirect vs Dispatcher forward
 
 Podemos redirigir de diferentes maneras:
