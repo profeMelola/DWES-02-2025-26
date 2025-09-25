@@ -54,7 +54,7 @@ Las cookies suelen utilizarse principalmente para dos finalidades:
 # Conceptos fundamentales de Cookies con Java
 
 
-**Para crear una cookie y enviarla al cliente:**
+## **Para crear una cookie y enviarla al cliente:**
 
 ```
 // Crear una cookie
@@ -74,7 +74,7 @@ Para limitar que la cookie queda limitada a toda la app y no se comparte con otr
 <img width="250" height="300" alt="image" src="https://github.com/user-attachments/assets/6857a2c7-9201-4891-b0d8-9dcfb225833d" />
 
 
-**Para leer la cookie, el servlet recibiría todas las cookies en el HttpServletRequest:**
+## **Para leer la cookie, el servlet recibiría todas las cookies en el HttpServletRequest:**
 
 ```
 Cookie[] cookies = request.getCookies();
