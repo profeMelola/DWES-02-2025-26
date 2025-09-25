@@ -35,7 +35,7 @@ Las cookies suelen utilizarse principalmente para dos finalidades:
   - Si colocas muchos archivos en tu cesta de la compra sin tener una cuenta, pero luego te vas, si vuelves a visitar la página muy posiblemente todavía podrá recordar lo que tenías en la cesta de la compra para que no tengas que volver a meterlo.
   - También ayudan a recordar otros datos como que estás buscando vuelos a Los Ángeles o que tu divisa preferida es el euro.
 
-  - **Conocer hábitos de navegación:** es la más conflictiva, y precisamente la que ha hecho que tengan tan mala fama.
+- **Conocer hábitos de navegación:** es la más conflictiva, y precisamente la que ha hecho que tengan tan mala fama.
     - Pueden utilizarlas terceros para enviarte información relacionada a tus intereses.
     - Pueden identificarte como usuario según las páginas que visitas.
     - Pueden saber en qué páginas entras, y por lo tanto, crear un perfil de tus gustos personales.
