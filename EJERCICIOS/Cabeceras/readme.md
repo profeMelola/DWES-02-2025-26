@@ -94,7 +94,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 ```
 
-Mejora el proyecto usando JSP.
+### AMPLIACIÓN: mejora el proyecto usando JSP.
 
 ## EJERCICIO 2: cabeceras de Response Http
 
