@@ -1,3 +1,32 @@
+# Cabeceras HTTP
+
+Las cabeceras HTTP (HTTP headers) son un conjunto de campos de datos que se envían tanto en las solicitudes (requests) como en las respuestas (responses) HTTP, para intercambiar información adicional entre el cliente (generalmente un navegador o una aplicación) y el servidor.
+
+Estas cabeceras permiten controlar cómo se debe comportar la comunicación entre el cliente y el servidor.
+
+## Tipos de cabeceras HTTP
+
+### Cabeceras de solicitud (Request Headers):
+
+- Son enviadas por el cliente al servidor, acompañando la solicitud.
+- Contienen información sobre el cliente, como el tipo de contenido que puede aceptar, la versión del navegador, las cookies, etc.
+- Ejemplos de cabeceras de solicitud:
+    - **Host:** Indica el nombre del servidor (dominio) al que se está haciendo la solicitud.
+    - **User-Agent:** Identifica el navegador o cliente que realiza la solicitud.
+    - **Accept:** Informa al servidor sobre los tipos de medios (MIME types) que el cliente puede procesar, como text/html, application/json, etc.
+    - **Authorization:** Se utiliza para pasar credenciales (como tokens o usuario y contraseña) en una solicitud protegida.
+    - **Cookie:** Envían cookies del cliente al servidor.
+
+### Cabeceras de respuesta (Response Headers):
+
+- Son enviadas por el servidor al cliente, acompañando la respuesta.
+- Informan al cliente sobre el estado de la respuesta, el formato de los datos, y otros metadatos.
+- Ejemplos de cabeceras de respuesta:
+    - **Content-Type:** Indica el tipo de contenido que se envía en el cuerpo de la respuesta, como text/html, application/json, etc.
+    - **Content-Length:** La longitud del contenido que se está enviando en la respuesta.
+    - **Set-Cookie:** Envía cookies del servidor al cliente para almacenarlas.
+    - **Content-Disposition:** Se usa para indicar cómo debe tratarse el contenido enviado (por ejemplo, si se debe descargar como un archivo adjunto).
+  
 # PROYECTO CabecerasApp
 
 ## Crea el proyecto
