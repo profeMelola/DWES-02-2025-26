@@ -8,13 +8,13 @@ Las capas típicas incluyen la capa de presentación, la capa de lógica de nego
 
 Cada capa se comunica con la capa adyacente a través de interfaces bien definidas. 
 
+- **Capa de presentación:** JSP (o HTML/JS en cliente).
+- **Capa de lógica de negocio (Servidor de aplicaciones):** aquí van el Servlet y también la clase utilitaria del ejemplo anterior.
+  - El Servlet gestiona la petición/respuesta.
+  - La clase utilitaria hace las consultas, pero sigue formando parte de la lógica de aplicación, porque el servidor de aplicaciones es el que sabe hablar con la BD.
+- **Capa de datos (Servidor de BD):** el motor de base de datos real (MySQL, PostgreSQL, etc.), que puede estar en otro equipo físico distinto.
 
-## Arquitectura 3 capas a nivel lógico.
-
-**Separación en las capas a nivel lógico:**
-- **Presentación:** JSP
-- **Lógica de negocio:** Servlet -> lógica
-- **Datos:** Clase DB -> acceso a datos
+<img width="415" height="236" alt="image" src="https://github.com/user-attachments/assets/9de56ef4-5bb8-4a9a-b1be-8596abc56e01" />
 
 ### 1. Presentación (JSP)
 ```
@@ -46,7 +46,6 @@ public class LoginServlet extends HttpServlet {
 }
 ```
 
-### 3. Capa de datos (clase utilitaria)
 ```
 // DBUtils.java
 public class DBUtils {
@@ -70,17 +69,11 @@ public class DBUtils {
 
 ```
 
-___
+### 3. Capa de datos
 
-## Arquitectura 3 capas a nivel físico.
+<img width="209" height="184" alt="image" src="https://github.com/user-attachments/assets/5f427d80-5eba-4ab8-aa12-7a9e63084243" />
 
-- **Capa de presentación:** JSP (o HTML/JS en cliente).
-- **Capa de lógica de negocio (Servidor de aplicaciones):** aquí van el Servlet y también la clase utilitaria del ejemplo anterior.
-  - El Servlet gestiona la petición/respuesta.
-  - La clase utilitaria hace las consultas, pero sigue formando parte de la lógica de aplicación, porque el servidor de aplicaciones es el que sabe hablar con la BD.
-- **Capa de datos (Servidor de BD):** el motor de base de datos real (MySQL, PostgreSQL, etc.), que puede estar en otro equipo físico distinto.
 
-<img width="415" height="236" alt="image" src="https://github.com/user-attachments/assets/9de56ef4-5bb8-4a9a-b1be-8596abc56e01" />
 
 ___
 
