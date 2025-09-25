@@ -71,6 +71,8 @@ ___
 
 ## Patrón MVC con JSP + Servlets
 
+<img width="620" height="622" alt="image" src="https://github.com/user-attachments/assets/399e4c86-8b7d-463c-bca1-21a10f088003" />
+
 No es una arquitectura, es un patrón de diseño del backend.
 
 - **Modelo (Usuario):** solo representa los datos del negocio.
