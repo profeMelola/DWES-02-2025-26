@@ -50,3 +50,34 @@ Las cookies suelen utilizarse principalmente para dos finalidades:
 - De preferencias o de personalización.
 - De rendimiento y análisis.
 - Publicitarias o de marketing.
+
+# Conceptos fundamentales de Cookies con Java
+
+
+**Para crear una cookie y enviarla al cliente:**
+
+```
+// Crear una cookie
+Cookie cookie = new Cookie("usuario", "nombreDeUsuario");
+// Establecer tiempo de expiración en 7 días
+cookie.setMaxAge(7 * 24 * 60 * 60); 
+response.addCookie(cookie);
+
+```
+
+Si no se especifica el setMaxAge, la cookie será permanente.
+
+Por defecto, el dominio de la cookie será el obtenido del contexto del servlet.
+
+**Para leer la cookie, el servlet recibiría todas las cookies en el HttpServletRequest:**
+
+```
+Cookie[] cookies = request.getCookies();
+for (Cookie c : cookies) {
+    if (c.getName().equals("usuario")) {
+        String nombreUsuario = c.getValue();
+        // Realizar alguna acción con el valor de la cookie
+    }
+}
+
+```
