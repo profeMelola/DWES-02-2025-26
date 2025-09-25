@@ -14,7 +14,7 @@ ___
 
 ___
 
-<img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/a3b824e6-7b54-4b9f-a2a9-bc602d371d24" /> Entonces...¿Por qué en nuestra index2.jsp del ejercicio del formulario tenemos el siguiente código?
+<img width="98" height="138" alt="image" src="https://github.com/user-attachments/assets/1317ed0e-fb38-4f3a-8047-40a36806f9ff" />  Entonces...¿Por qué en nuestra index2.jsp del ejercicio del formulario tenemos el siguiente código?
 
 ```
     // si no viaje el username en el request será null
