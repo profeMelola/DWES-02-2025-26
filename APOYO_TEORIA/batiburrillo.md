@@ -4,7 +4,13 @@ En el servlet con request.getParameter("..."):
 - Si el campo estaba en el formulario con name pero vacío → devuelve cadena vacía ("").
 - Si el campo no se envió en absoluto (porque no tenía name, o era un checkbox no marcado, o un radio button no seleccionado) → devuelve null.
 
-  <img width="1265" height="297" alt="image" src="https://github.com/user-attachments/assets/444f7785-5c9a-4b9c-b56c-3633c2c9f005" />
+<img width="1265" height="297" alt="image" src="https://github.com/user-attachments/assets/444f7785-5c9a-4b9c-b56c-3633c2c9f005" />
+
+___
+
+<img width="1111" height="827" alt="image" src="https://github.com/user-attachments/assets/c719b6e5-c0c1-468c-b496-1f56246a8c76" />
+
+<img width="784" height="581" alt="image" src="https://github.com/user-attachments/assets/6ff31d43-be66-4336-84cf-4948da2da3d3" />
 
 
 # sendRedirect vs Dispatcher forward
