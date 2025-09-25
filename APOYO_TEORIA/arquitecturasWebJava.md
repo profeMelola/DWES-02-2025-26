@@ -3,9 +3,9 @@
 ## Arquitectura 3 capas
 
 Separación en las capas:
-- Presentación: JSP
-- Lógica de negocio: Servlet -> lógica
-- Datos: Clase DB -> acceso a datos
+- **Presentación:** JSP
+- **Lógica de negocio:** Servlet -> lógica
+- **Datos:** Clase DB -> acceso a datos
 
 ### 1. Presentación (JSP)
 ```
