@@ -1,6 +1,6 @@
 # Ejemplo: login de usuario con JakartaEE
 
-## Arquitectura 3
+## Arquitectura 3 capas o niveles
 
 Esta arquitectura divide la aplicación en diferentes capas físicas o lógicas, donde cada capa tiene una responsabilidad específica. 
 
