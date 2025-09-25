@@ -66,22 +66,50 @@ ___
 ## Patrón MVC con JSP + Servlets
 
 Se afina la separación interna:
-- Modelo = UsuarioDAO (gestiona datos)
-- Controlador = LoginController (decide qué vista mostrar)
-- Vista = JSP (bienvenido.jsp, error.jsp)
+- Definir interfaces DAO (con operaciones CRUD).
+- Tener clases de implementación DAO que saben hablar con la BD (JDBC, JPA, Hibernate, etc.).
+- El Modelo (clases de negocio, como Usuario) no debería saber cómo se accede a los datos, solo usar el DAO.
+- El Controlador (Servlet) no mete SQL ni lógica de BD, solo coordina: recibe datos del usuario, llama al modelo/DAO y selecciona la vista.
 
-### 1. Modelo (gestiona datos y lógica de BD)
+### 1. Modelo 
+
+#### 1.1. Entidad de negocio
+```
+// Usuario.java
+public class Usuario {
+    private String nombre;
+    private String password;
+
+    public Usuario(String nombre, String password) {
+        this.nombre = nombre;
+        this.password = password;
+    }
+    public String getNombre() { return nombre; }
+    public String getPassword() { return password; }
+}
+
+```
+#### 1.2. Interfaz DAO
 ```
 // UsuarioDAO.java
-public class UsuarioDAO {
-    public static boolean validar(String user, String pass) {
+public interface UsuarioDAO {
+    boolean validar(Usuario usuario);
+}
+```
+
+#### 1.3. Implementación DAO (persistencia concreta con JDBC)
+```
+// UsuarioDAOImpl.java
+public class UsuarioDAOImpl implements UsuarioDAO {
+    @Override
+    public boolean validar(Usuario usuario) {
         try (Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/tienda", "root", "")) {
             
             PreparedStatement stmt = conn.prepareStatement(
                 "SELECT * FROM usuarios WHERE nombre=? AND pass=?");
-            stmt.setString(1, user);
-            stmt.setString(2, pass);
+            stmt.setString(1, usuario.getNombre());
+            stmt.setString(2, usuario.getPassword());
             
             ResultSet rs = stmt.executeQuery();
             return rs.next();
@@ -98,21 +126,24 @@ public class UsuarioDAO {
 // LoginController.java
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
+    private UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        String user = request.getParameter("user");
+        String nombre = request.getParameter("user");
         String pass = request.getParameter("pass");
 
-        if (UsuarioDAO.validar(user, pass)) {
-            request.setAttribute("usuario", user);
+        Usuario usuario = new Usuario(nombre, pass);
+
+        if (usuarioDAO.validar(usuario)) {
+            request.setAttribute("usuario", usuario.getNombre());
             request.getRequestDispatcher("bienvenido.jsp").forward(request, response);
         } else {
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
 }
-
 ```
 
 ### 3. Vista (JSP)
