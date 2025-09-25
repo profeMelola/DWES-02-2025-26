@@ -2,6 +2,12 @@
 
 ## Arquitectura 3 capas
 
+Esta arquitectura divide la aplicación en diferentes capas físicas o lógicas, donde cada capa tiene una responsabilidad específica. 
+
+Las capas típicas incluyen la capa de presentación, la capa de lógica de negocio y la capa de acceso a datos. 
+
+Cada capa se comunica con la capa adyacente a través de interfaces bien definidas. 
+
 Separación en las capas:
 - **Presentación:** JSP
 - **Lógica de negocio:** Servlet -> lógica
@@ -64,6 +70,8 @@ public class DBUtils {
 ___
 
 ## Patrón MVC con JSP + Servlets
+
+No es una arquitectura, es un patrón de diseño del backend.
 
 - **Modelo (Usuario):** solo representa los datos del negocio.
   - **DAO (UsuarioDAO + UsuarioDAOImpl):** define y encapsula el acceso a datos (puedes cambiar JDBC por JPA sin que el resto cambie).
