@@ -53,7 +53,21 @@ Las cookies suelen utilizarse principalmente para dos finalidades:
 
 # Conceptos fundamentales de Cookies con Java
 
+- Una cookie es un pequeño archivo de texto que el servidor web crea y envía al navegador del cliente.
+- Ese archivo contiene pares clave=valor (por ejemplo: usuario=juan), y puede incluir además metadatos como:
+  - fecha de caducidad
+  - dominio
+  - ruta a la que aplica
+  - si es segura (HTTPS)
+  - si es solo accesible desde el servidor (HttpOnly)
 
+## Ciclo de vida de una cookie
+
+1. Creación en el servidor
+2. Envío al navegador: esto añade una cabecera Set-cooke en la respuesta HTTP.
+3. Reenvío automático en cada petición: cada vez que el navegador haga una petición al mismo servidor y dentro del dominio/ruta, incluirá en la cabecera HTTP *Cookie: nombreCookie=valorCookie*
+4. Lecutra en el servidor
+   
 ## **Para crear una cookie y enviarla al cliente:**
 
 ```
@@ -67,6 +81,8 @@ response.addCookie(cookie);
 
 Si no se especifica el setMaxAge, la cookie será permanente.
 
+Esto añade una cabecera Set-cooke en la respuesta HTTP.
+
 Por defecto, el dominio de la cookie será el obtenido del contexto del servlet.
 
 Para limitar que la cookie queda limitada a toda la app y no se comparte con otras apps: cookie.setPath(request.getContextPath());
@@ -78,11 +94,14 @@ Para limitar que la cookie queda limitada a toda la app y no se comparte con otr
 
 ```
 Cookie[] cookies = request.getCookies();
-for (Cookie c : cookies) {
-    if (c.getName().equals("usuario")) {
-        String nombreUsuario = c.getValue();
-        // Realizar alguna acción con el valor de la cookie
-    }
+if (cookies != null){
+  for (Cookie c : cookies) {
+      if (c.getName().equals("usuario")) {
+          String nombreUsuario = c.getValue();
+          // Realizar alguna acción con el valor de la cookie
+          // out.println("Bienvenido de nuevo " + c.getValue());
+      }
+  }
 }
 
 ```
