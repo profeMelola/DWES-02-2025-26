@@ -105,3 +105,5 @@ if (cookies != null){
 }
 
 ```
+
+<img width="651" height="446" alt="image" src="https://github.com/user-attachments/assets/2ef74556-46c6-4925-955f-d73626515b3b" />
