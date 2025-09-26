@@ -107,3 +107,25 @@ if (cookies != null){
 ```
 
 <img width="651" height="446" alt="image" src="https://github.com/user-attachments/assets/2ef74556-46c6-4925-955f-d73626515b3b" />
+
+# EJERCICIO: recordar color de fondo con cookies
+
+Crea y implementa un proyecto que:
+
+1. Muestre un formulario para elegir un color de fondo la primera vez que el usuario entra.
+2. Guarde la elección en una cookie enviada desde el servidor al navegador.
+3. En visitas posteriores, la página recuerde el color y aplique ese fondo automáticamente sin volver a pedirlo.
+4. Permitir cambiar el color elegido y/o borrar la cookie.
+
+```
+src/
+ └─ main/
+     ├─ java/
+     │   └─ es.daw.cookies/
+     │        └─ PreferenciasColorServlet.java
+     └─ webapp/
+         ├─ index.jsp        (opcional: redirige al servlet)
+         └─ color.jsp        (vista principal)
+
+```
+
