@@ -112,9 +112,9 @@ if (cookies != null){
 
 Crea y implementa un proyecto que:
 
-1. Muestre un formulario para elegir un color de fondo la primera vez que el usuario entra.
+1. Muestre un formulario para elegir un color de fondo de la página principal.
 2. Guarde la elección en una cookie enviada desde el servidor al navegador.
-3. En visitas posteriores, la página recuerde el color y aplique ese fondo automáticamente sin volver a pedirlo.
+3. En visitas posteriores, la página recuerde el color y aplique ese fondo automáticamente a la página principal sin volver a pedirlo.
 4. Permitir cambiar el color elegido y/o borrar la cookie.
 
 ```
@@ -124,8 +124,8 @@ src/
      │   └─ es.daw.cookies/
      │        └─ PreferenciasColorServlet.java
      └─ webapp/
-         ├─ index.jsp        (opcional: redirige al servlet)
-         └─ color.jsp        (vista principal)
+         ├─ index.jsp        (bienvenida y pregunta si quiere cambiar el color de fondo)
+         └─ color.jsp        (formulario para cambiar el color)
 
 ```
 
