@@ -17,7 +17,11 @@ Conecta usando:
 - Password: (vacío)
 - Copia y pega tu script SQL y ejecútalo (productos.sql).
 
-## Montar entorno
+Si todo va bien, deberías tener dos tablas: fabricante y producto con los inserts cargados.
+
+El fichero productosdb.mv.db estará en tu carpeta de usuario (ej. C:\Users\tuUsuario\productosdb.mv.db o /home/tuUsuario/productosdb.mv.db).
+
+## En tu proyecto web
 
 ```
 private static final String JDBC_URL = "jdbc:h2:~/productosdb;AUTO_SERVER=TRUE";
