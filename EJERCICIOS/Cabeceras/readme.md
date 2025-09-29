@@ -137,10 +137,10 @@ Vamos a exportar productos a dos formatos diferentes: html y css
   ```
               // Poner el mime type adecuado
             response.setContentType("application/vnd.ms-excel");
-            response.setHeader("Content-Disposition","attachment;filename=products.xsl");
+            response.setHeader("Content-Disposition","attachment;filename=products.xls");
   ```
 
-Vamos a exportar los productos a un archivo XSL sencillo, una tabla con datos.
+Vamos a exportar los productos a un archivo XLS sencillo, una tabla con datos.
 
 Tenemos que crear un nuevo servlet, controlador, llamado **ProductoXLSServlet**.
 
