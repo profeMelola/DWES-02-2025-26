@@ -80,7 +80,7 @@ public class SesionController {
 
 ```
 
-**Forma 2::
+**Forma 2**
 
 ```
 import org.springframework.stereotype.Controller;
