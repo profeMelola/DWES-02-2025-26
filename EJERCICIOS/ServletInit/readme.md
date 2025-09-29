@@ -51,3 +51,62 @@ int valor = contador.incrementAndGet();
 response.getWriter().println("Contador de este usuario: " + valor);
 
 ```
+
+#### **Con proyectos Spring trabajaremos la sesión de dos formas:**
+
+**Forma 1**
+
+```
+import jakarta.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SesionController {
+
+    @GetMapping("/contador")
+    public String contador(HttpSession session) {
+        Integer contador = (Integer) session.getAttribute("contador");
+
+        if (contador == null) {
+            contador = 0;
+        }
+        contador++;
+        session.setAttribute("contador", contador);
+
+        return "Has visitado esta página " + contador + " veces en esta sesión.";
+    }
+}
+
+```
+
+**Forma 2::
+
+```
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+@Controller
+@SessionAttributes("contador")
+public class ContadorController {
+
+    @GetMapping("/contador")
+    public String contador(Model model) {
+        Integer contador = (Integer) model.getAttribute("contador");
+
+        if (contador == null) {
+            contador = 0;
+        }
+        contador++;
+        model.addAttribute("contador", contador);
+
+        return "contador"; // devolvería una vista Thymeleaf con el valor
+    }
+}
+
+```
+
+
+
