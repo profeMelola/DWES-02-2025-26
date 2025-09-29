@@ -1,6 +1,6 @@
 # ¿Qué es una cookie?
 
-<img width="933" height="255" alt="image" src="https://github.com/user-attachments/assets/ac759dcd-bf40-414c-b7e7-f5ee3fd3d652" />
+<img width="466" height="128" alt="image" src="https://github.com/user-attachments/assets/ac759dcd-bf40-414c-b7e7-f5ee3fd3d652" />
 
 Una cookie son datos del usuario almacenados en el navegador web (lado del cliente) y los servidores la utilizan cuando se comunican con el cliente.
 
