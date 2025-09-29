@@ -129,3 +129,22 @@ src/
 
 ```
 
+<img width="470" height="337" alt="image" src="https://github.com/user-attachments/assets/79e1a79d-2692-4c10-b718-423a33eb0571" />
+
+<img width="597" height="663" alt="image" src="https://github.com/user-attachments/assets/f44e1ca2-0a4b-4da8-aff0-b16de294dfe8" />
+
+<img width="627" height="294" alt="image" src="https://github.com/user-attachments/assets/28549e04-d5a1-4f90-b3c0-3bf55410a248" />
+
+<img width="479" height="377" alt="image" src="https://github.com/user-attachments/assets/3489cb78-c9a6-4611-876e-54137f00d2b2" />
+
+
+
+## JSESSIONID
+
+Esa cookie **JSESSIONID** no la estás creando tú, la crea automáticamente el contenedor web (Tomcat, WildFly, etc.) para gestionar las sesiones HTTP.
+
+<img width="1309" height="692" alt="image" src="https://github.com/user-attachments/assets/939f6db3-5bd0-4fa0-ad90-a1d63878a28f" />
+
+- Es un identificador único que el servidor asigna a cada cliente cuando empieza una sesión.
+- Permite que el servidor sepa que varias peticiones HTTP vienen del mismo usuario/navegador (porque HTTP por sí solo es un protocolo sin estado).
+- Se guarda en el navegador como una cookie y en el servidor se asocia a un objeto HttpSession.
