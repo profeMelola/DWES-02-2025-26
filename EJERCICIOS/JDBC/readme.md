@@ -12,3 +12,16 @@ Soporta modo en memoria o en fichero.
 Integra bien con frameworks Java (Spring, Hibernate, Jakarta EE).
 
 Tiene consola web para ver y ejecutar queries (http://localhost:8082).
+
+### Añadir dependencia en pom.xml
+
+```
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>2.3.232</version>
+    <scope>test</scope>
+</dependency>
+```
+
