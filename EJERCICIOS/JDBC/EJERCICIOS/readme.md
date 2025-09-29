@@ -54,11 +54,10 @@ Class.forName("org.h2.Driver");
 
 ### Servlets (Controllers)
 
-SERVLETS (CONTROLLERS)
 Tendremos dos servlets o controladores:
 
-1. SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
+#### 1. SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
   <img width="715" height="560" alt="image" src="https://github.com/user-attachments/assets/6d45b8b8-e305-4be6-9f3d-7b93cde07f6c" />
 
-3. SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE) DE PRODUCTOS
+#### 2. SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE) DE PRODUCTOS
    <img width="820" height="500" alt="image" src="https://github.com/user-attachments/assets/b317d000-5e33-4248-8401-f511d6beba1c" />
