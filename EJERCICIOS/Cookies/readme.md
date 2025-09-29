@@ -129,13 +129,19 @@ src/
 
 ```
 
-<img width="470" height="337" alt="image" src="https://github.com/user-attachments/assets/79e1a79d-2692-4c10-b718-423a33eb0571" />
+## Pasos
 
-<img width="597" height="663" alt="image" src="https://github.com/user-attachments/assets/f44e1ca2-0a4b-4da8-aff0-b16de294dfe8" />
+### 1.
+<img width="235" height="168" alt="image" src="https://github.com/user-attachments/assets/79e1a79d-2692-4c10-b718-423a33eb0571" />
 
-<img width="627" height="294" alt="image" src="https://github.com/user-attachments/assets/28549e04-d5a1-4f90-b3c0-3bf55410a248" />
+### 2.
+<img width="298" height="331" alt="image" src="https://github.com/user-attachments/assets/f44e1ca2-0a4b-4da8-aff0-b16de294dfe8" />
 
-<img width="479" height="377" alt="image" src="https://github.com/user-attachments/assets/3489cb78-c9a6-4611-876e-54137f00d2b2" />
+### 3.
+<img width="313" height="147" alt="image" src="https://github.com/user-attachments/assets/28549e04-d5a1-4f90-b3c0-3bf55410a248" />
+
+### 4.
+<img width="240" height="188" alt="image" src="https://github.com/user-attachments/assets/3489cb78-c9a6-4611-876e-54137f00d2b2" />
 
 
 
