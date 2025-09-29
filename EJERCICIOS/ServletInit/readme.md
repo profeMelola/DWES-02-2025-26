@@ -40,15 +40,15 @@ Podrías guardar el contador dentro de la sesión:
 
 ```
 HttpSession session = request.getSession();
-AtomicInteger contador = (AtomicInteger) session.getAttribute("contador");
+Integer contador = (Integer) session.getAttribute("contador");
 
 if (contador == null) {
-    contador = new AtomicInteger(0);
-    session.setAttribute("contador", contador);
+    contador = 0;
 }
+contador++;
+session.setAttribute("contador", contador);
 
-int valor = contador.incrementAndGet();
-response.getWriter().println("Contador de este usuario: " + valor);
+response.getWriter().println("Contador de este usuario: " + contador);
 
 ```
 
