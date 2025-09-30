@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EJERCICIOS/Formulario/DAWA/DAWA.iml" filepath="$PROJECT_DIR$/EJERCICIOS/Formulario/DAWA/DAWA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJERCICIOS/Cabeceras/DAWA/DAWA2.iml" filepath="$PROJECT_DIR$/EJERCICIOS/Cabeceras/DAWA/DAWA2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJERCICIOS/Cabeceras/DAWB/DAWB.iml" filepath="$PROJECT_DIR$/EJERCICIOS/Cabeceras/DAWB/DAWB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJERCICIOS/Formulario/DAWB/DAWB2.iml" filepath="$PROJECT_DIR$/EJERCICIOS/Formulario/DAWB/DAWB2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DWES-02-2025-26.iml" filepath="$PROJECT_DIR$/.idea/DWES-02-2025-26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJERCICIOS/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/EJERCICIOS/JDBC/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJERCICIOS/ParamGetServlet/ParamGetServlet.iml" filepath="$PROJECT_DIR$/EJERCICIOS/ParamGetServlet/ParamGetServlet.iml" />
+    </modules>
+  </component>
+</project>

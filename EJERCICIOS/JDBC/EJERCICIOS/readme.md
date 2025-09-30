@@ -104,6 +104,14 @@ Tendremos dos servlets o controladores:
 
    <img width="410" height="250" alt="image" src="https://github.com/user-attachments/assets/b317d000-5e33-4248-8401-f511d6beba1c" />
 
+
+### Vistas (JSP)
+
+Utiliza las JSP que se proporcionan:
+- index.jsp
+- informe.jsp
+- error.jsp
+
 # MEJORAS
 
 ## Mostrar el nombre de fabricante, no el código
