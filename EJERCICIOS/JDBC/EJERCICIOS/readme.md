@@ -13,13 +13,16 @@ Vamos a usar H2 como base de datos relacional.
 </dependency>
 ```
 
-## H2 en memoria
-
-La base de datos se va a crear cuando despleguemos nuestro proyecto.
+## Estructura del proyecto
 
 Nuestro proyecto tendrá una estrucutra como la siguiente:
 
 ![alt text](image.png)
+
+
+## H2 en memoria
+
+La base de datos se va a crear en memoria cuando despleguemos nuestro proyecto. No existirá físicamente.
 
 En el directorio **resources** de nuestro proyecto crearemos el archivo **JDBC.properties**:
 
