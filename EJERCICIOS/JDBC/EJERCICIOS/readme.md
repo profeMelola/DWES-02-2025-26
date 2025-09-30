@@ -1,6 +1,8 @@
 # MI PRIMER APP JDBC
 
-## Añadir dependencia en pom.xml
+## Añadir dependencia H2 en pom.xml
+
+Vamos a usar H2 como base de datos relacional.
 
 ```
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
@@ -11,7 +13,30 @@
 </dependency>
 ```
 
-## Montar BD y tablas con H2 Console
+## H2 en memoria
+
+La base de datos se va a crear cuando despleguemos nuestro proyecto.
+
+Nuestro proyecto tendrá una estrucutra como la siguiente:
+
+![alt text](image.png)
+
+En el directorio **resources** de nuestro proyecto crearemos el archivo **JDBC.properties**:
+
+```
+# Propiedad de conexión a base de datos
+#url=jdbc:h2:~/productos;AUTO_SERVER=TRUE
+url=jdbc:h2:mem:productos;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:schema.sql'
+user=sa
+password=
+
+```
+- mem: → le indicas a H2 que cree la BD en memoria.
+- DB_CLOSE_DELAY=-1 → hace que la BD no se borre en cuanto se cierre la última conexión (muy útil en web apps).
+- RUNSCRIPT FROM 'classpath:schema.sql' → ejecuta automáticamente un script SQL al levantar la conexión.
+- Ese schema.sql (o import.sql) debe estar en tu classpath (por ejemplo en src/main/resources).
+
+## Montar BD y tablas con H2 Console (si no trabajamos en memoria...)
 
 ```
 java -cp h2-2.2.x.jar org.h2.tools.Server
@@ -34,8 +59,18 @@ El fichero productosdb.mv.db estará en tu carpeta de usuario (ej. C:\Users\tuUs
 
 AUTO_SERVER=TRUE → permite que distintos procesos (ej. Tomcat y H2 console) accedan al mismo fichero.
 
+El archivo JDBC.properties contendría:
 
-## JDBC - Trabajando con la base de datos TIENDA. Práctica guiada: tienda CRUD DAO
+
+```
+# Propiedad de conexión a base de datos
+url=jdbc:h2:~/productosdb;AUTO_SERVER=TRUE
+user=sa
+password=
+```
+
+
+## JDBC - Trabajando con la base de datos PRODUCTOS. Práctica guiada: tienda CRUD DAO
 
 <img width="767" height="657" alt="image" src="https://github.com/user-attachments/assets/7e1fa7a9-7a38-4213-beca-31984db79dc8" />
 
@@ -51,24 +86,21 @@ Vamos a realizar las cuatro operaciones básicas contra una tabla usando la base
 
 ### Configuración de la conexión a H2
 
-1. Fichero JDBC.properties que estará en webapp del proyecto:
-```
-# Propiedad de conexión a base de datos
-url=jdbc:h2:~/productosdb;AUTO_SERVER=TRUE
-user=sa
-password=
-```
-2. Indicar el driver de conexión adecuado: En la clase DBConnection del paquete package es.daw.jakarta.bd: 
-```
-Class.forName("org.h2.Driver");
-```
+Usa la clase **DBConnection** que se proporciona.
+
 
 ### Servlets (Controllers)
 
 Tendremos dos servlets o controladores:
 
 #### 1. SERVLET ENCARGADO DE LISTAR LOS PRODUCTOS
-  <img width="715" height="560" alt="image" src="https://github.com/user-attachments/assets/6d45b8b8-e305-4be6-9f3d-7b93cde07f6c" />
+
+![alt text](image-1.png)
 
 #### 2. SERVLET ENCARGADO DE OPERACIONES DE MODIFICACIÓN (INSERT, UPDATE, DELETE) DE PRODUCTOS
-   <img width="820" height="500" alt="image" src="https://github.com/user-attachments/assets/b317d000-5e33-4248-8401-f511d6beba1c" />
+
+   <img width="410" height="250" alt="image" src="https://github.com/user-attachments/assets/b317d000-5e33-4248-8401-f511d6beba1c" />
+
+# MEJORAS
+
+## Mostrar el nombre de fabricante, no el código
