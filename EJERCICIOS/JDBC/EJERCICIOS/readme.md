@@ -1,5 +1,16 @@
 # MI PRIMER APP JDBC
 
+## Añadir dependencia en pom.xml
+
+```
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>2.3.232</version>
+</dependency>
+```
+
 ## Montar BD y tablas con H2 Console
 
 ```
