@@ -54,3 +54,48 @@ public class DespacharServlet extends HttpServlet {
 }
 
 ```
+# Optional
+
+
+Optional<T> es un contenedor que puede:
+
+- tener un valor de tipo T
+- o estar vacío (Optional.empty()).
+
+Fue introducido en Java 8 para evitar el uso directo de null y el clásico error de NullPointerException (NPE).
+
+En vez de:
+
+```
+Producto p = service.findById(10L);
+if (p != null) {
+    System.out.println(p.getNombre());
+}
+
+```
+
+Usas:
+
+```
+service.findById(10L)
+       .ifPresent(p -> System.out.println(p.getNombre()));
+
+```
+
+Fomenta un código más robusto porque obligas en código a decidir qué hacer si no hay objeto:
+- .orElse(defaultValue)
+```
+String nombre = service.findById(2L)
+                       .map(Producto::getNombre)
+                       .orElse("Desconocido");
+
+```
+- .orElseThrow(...)
+
+```
+Producto p = service.findById(3L)
+                    .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+
+```
+
+- .ifPresent(...)
