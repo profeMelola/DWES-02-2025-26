@@ -108,6 +108,20 @@ if (cookies != null){
 
 <img width="651" height="446" alt="image" src="https://github.com/user-attachments/assets/2ef74556-46c6-4925-955f-d73626515b3b" />
 
+## **Para borrar una cookie**
+
+```
+Cookie cookie = new Cookie("usuario", "");
+cookie.setMaxAge(0); // Se borra inmediatamente
+cookie.setPath("/"); // Debe coincidir con el path de la cookie original
+response.addCookie(cookie);
+
+```
+- Crear una nueva cookie con el mismo nombre que la cookie que quieres borrar.
+- Asignarle un maxAge igual a 0 (cero segundos de vida).
+- (Opcional) Asegurarte de que el path es el mismo que tenía la cookie original.
+- Enviarla al navegador con response.addCookie(cookie).
+
 # EJERCICIO: recordar color de fondo con cookies
 
 Crea y implementa un proyecto que:
