@@ -99,3 +99,34 @@ Producto p = service.findById(3L)
 ```
 
 - .ifPresent(...)
+
+
+___
+
+# Maven scope
+
+Valores típicos de <scope> en Maven:
+
+## compile (por defecto)
+
+- Es el valor que se aplica si no pones <scope>.
+- Significa que la dependencia está disponible en:
+    - Compilación (javac)
+    - Ejecución (runtime)
+    - Test
+- Ejemplo: librerías que tu aplicación necesita siempre, como spring-core.
+
+## provided
+- La dependencia se necesita para compilar y testear, pero no se empaqueta en el JAR/WAR porque el entorno de ejecución ya la provee.
+- Ejemplo típico: servlet-api en proyectos web, ya que el servidor de aplicaciones (Tomcat, WildFly, etc.) la proporciona.
+
+## runtime
+- No se necesita para compilar, pero sí para ejecutar y testear.
+- Ejemplo: un driver JDBC (mysql-connector-java), que no afecta a la compilación pero sí lo necesitas al correr.
+
+## test
+- Solo está disponible en el classpath de test.
+- Ejemplo: junit, mockito.
+
+## system, import...
+Obsoletas
