@@ -115,3 +115,5 @@ Utiliza las JSP que se proporcionan:
 # MEJORAS
 
 ## Mostrar el nombre de fabricante, no el código
+## FILTRAR PRODUCTOS POR NOMBRE
+## USAR EL FILTRO POR ID. SI NO EXISTE CÓMO TRATARLO!!!
