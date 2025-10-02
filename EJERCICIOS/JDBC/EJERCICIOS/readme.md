@@ -124,6 +124,21 @@ ___
 Para los alumnos.. fundamental!!!!
 ### EN INDEX.JSP QUE SALGA LA LISTA DE FABRICANTES DINÁMICAMENTE. OBTENIDAS DE LA BD
 Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findAll... fundamental!!!!
+
+```
+        <select name="codigo_fabricante" id="departamento">
+            <option value="1">Asus</option>
+            <option value="2">Lenovo</option>
+            <option value="3">Hewlett-Packard</option>
+            <option value="4">Samsung</option>
+            <option value="5">Seagate</option>
+            <option value="6">Crucial</option>
+            <option value="7">Gigabyte</option>
+            <option value="8">Huawei</option>
+            <option value="9">Xiaomi</option>
+        </select>
+`` 
+
 ### LO HACEMOS EN CLASE: Mostrar el nombre de fabricante, no el código
 ___
 ## LA HACEMOS EN CLASE: EN LA TABLA DE PRODUCTOS AÑADIR UNA COLUMNA PARA BORRAR Y OTRA PARA ACTUALIZAR. SI ACTUALIZO, SALE UN FORMULARIO CON LOS DATOS DEL PRODUCTO Y ALDAR A SALVAR SE ACTUALIZA 
