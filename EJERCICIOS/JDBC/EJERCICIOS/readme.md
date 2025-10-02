@@ -147,6 +147,13 @@ Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findA
 - Hace forward a index.jsp.
 - index.jsp solo muestra la vista, iterando los fabricantes recibidos.
 
+Para que se ejecute directamente el servlet /index, tendremos que configurar en web.xml lo siguiente:
+```
+<welcome-file-list>
+    <welcome-file>index</welcome-file>
+</welcome-file-list>
+```
+
 ### LO HACEMOS EN CLASE: Mostrar el nombre de fabricante, no el código
 ___
 ## LA HACEMOS EN CLASE: EN LA TABLA DE PRODUCTOS AÑADIR UNA COLUMNA PARA BORRAR Y OTRA PARA ACTUALIZAR. SI ACTUALIZO, SALE UN FORMULARIO CON LOS DATOS DEL PRODUCTO Y ALDAR A SALVAR SE ACTUALIZA 
