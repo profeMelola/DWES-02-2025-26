@@ -122,6 +122,7 @@ ___
 
 ## HACER EL CRUD DE FABRICANTE
 Para los alumnos.. fundamental!!!!
+
 ### EN INDEX.JSP QUE SALGA LA LISTA DE FABRICANTES DINÁMICAMENTE. OBTENIDAS DE LA BD
 Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findAll... fundamental!!!!
 
@@ -138,6 +139,13 @@ Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findA
             <option value="9">Xiaomi</option>
         </select>
 ```
+
+**Pista:**
+- El usuario pide /index en el navegador.
+- IndexServlet (Servlet) hace la consulta a la BD (con tu FabricanteDAO).
+- Pone la lista de fabricantes en el request.
+- Hace forward a index.jsp.
+- index.jsp solo muestra la vista, iterando los fabricantes recibidos.
 
 ### LO HACEMOS EN CLASE: Mostrar el nombre de fabricante, no el código
 ___
