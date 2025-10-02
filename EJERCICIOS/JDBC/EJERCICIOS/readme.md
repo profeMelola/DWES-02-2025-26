@@ -114,12 +114,14 @@ Utiliza las JSP que se proporcionan:
 
 # MEJORAS
 
-## Mostrar el nombre de fabricante, no el código
+## LO HACEMOS EN CLASE: Mostrar el nombre de fabricante, no el código
 ## FILTRAR PRODUCTOS POR NOMBRE
+Para los alumnos...
 ## USAR EL FILTRO POR ID. SI NO EXISTE CÓMO TRATARLO!!!
+Para los alumnos...
 ## HACER EL CRUD DE FABRICANTE
 Para los alumnos.. fundamental!!!!
 ## EN INDEX.JSP QUE SALGA LA LISTA DE FABRICANTES DINÁMICAMENTE. OBTENIDAS DE LA BD
 Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findAll... fundamental!!!!
-## LA HACEMO EN CLASE: EN LA TABLA DE PRODUCTOS AÑADIR UNA COLUMNA PARA BORRAR Y OTRA PARA ACTUALIZAR. SI ACTUALIZO, SALE UN FORMULARIO CON LOS DATOS DEL PRODUCTO Y ALDAR A SALVAR SE ACTUALIZA 
+## LA HACEMOS EN CLASE: EN LA TABLA DE PRODUCTOS AÑADIR UNA COLUMNA PARA BORRAR Y OTRA PARA ACTUALIZAR. SI ACTUALIZO, SALE UN FORMULARIO CON LOS DATOS DEL PRODUCTO Y ALDAR A SALVAR SE ACTUALIZA 
 (se envían de nuevo todos los datos y se genera el objeto producto)
