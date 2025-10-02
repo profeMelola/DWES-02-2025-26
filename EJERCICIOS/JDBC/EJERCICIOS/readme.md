@@ -137,7 +137,7 @@ Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findA
             <option value="8">Huawei</option>
             <option value="9">Xiaomi</option>
         </select>
-`` 
+``
 
 ### LO HACEMOS EN CLASE: Mostrar el nombre de fabricante, no el código
 ___
