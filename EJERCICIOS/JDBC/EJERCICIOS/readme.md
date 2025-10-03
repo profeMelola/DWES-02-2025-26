@@ -158,3 +158,7 @@ Para que se ejecute directamente el servlet /index, tendremos que configurar en 
 ___
 ## 4. LA HACEMOS EN CLASE: EN LA TABLA DE PRODUCTOS AÑADIR UNA COLUMNA PARA BORRAR Y OTRA PARA ACTUALIZAR. SI ACTUALIZO, SALE UN FORMULARIO CON LOS DATOS DEL PRODUCTO Y ALDAR A SALVAR SE ACTUALIZA 
 (se envían de nuevo todos los datos y se genera el objeto producto)
+
+## 5. AL MODIFICAR UN PRODUCTO (insert, delete y update) QUE SE MUESTRE AUTOMÁTICAMENTE LA LISTA DE PRODUCTOS
+Para los alumnos.
+La lista que salga ordenada por código de producto desc....
