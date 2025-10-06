@@ -114,17 +114,27 @@ Utiliza las JSP que se proporcionan:
 
 # MEJORAS
 
-## 1. FILTRAR PRODUCTOS POR NOMBRE
+## 1. Filtrar productos por nombre
 Para los alumnos...
-## 2. USAR EL FILTRO POR ID. SI NO EXISTE CÓMO TRATARLO!!!
+
+## 2. Filtrar productos por id
+
 Para los alumnos...
+
+Si no existe el producto... ¿cómo lo trato? Pensar en diferentes opciones
 ___
 
-## 3. HACER EL CRUD DE FABRICANTE
+## 3. Crud del fabricante
+
 Para los alumnos.. fundamental!!!!
 
-### 3.1. EN INDEX.JSP QUE SALGA LA LISTA DE FABRICANTES DINÁMICAMENTE. OBTENIDAS DE LA BD
-Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findAll... fundamental!!!!
+### 3.1. En la vista index.jsp que salga la lista de fabricantes obtenidos de la BD
+
+Para los alumnos. 
+
+Previamente hacer el CRUD de Fabricante por lo menos con findAll... fundamental!!!!
+
+Esta es la lista estática a renderizar dinámicamente en el servidor:
 
 ```
         <select name="codigo_fabricante" id="departamento">
@@ -147,18 +157,28 @@ Para los alumnos. Previamente hacer el CRUD de Fabricante por lo menos con findA
 - Hace forward a index.jsp.
 - index.jsp solo muestra la vista, iterando los fabricantes recibidos.
 
-Para que se ejecute directamente el servlet /index, tendremos que configurar en web.xml lo siguiente:
+Para que se ejecute directamente el servlet /index, tendremos que configurar en **web.xml** lo siguiente:
 ```
 <welcome-file-list>
     <welcome-file>index</welcome-file>
 </welcome-file-list>
 ```
 
-### 3.2. LO HACEMOS EN CLASE: Mostrar el nombre de fabricante, no el código
-___
-## 4. LA HACEMOS EN CLASE: EN LA TABLA DE PRODUCTOS AÑADIR UNA COLUMNA PARA BORRAR Y OTRA PARA ACTUALIZAR. SI ACTUALIZO, SALE UN FORMULARIO CON LOS DATOS DEL PRODUCTO Y ALDAR A SALVAR SE ACTUALIZA 
-(se envían de nuevo todos los datos y se genera el objeto producto)
+### 3.2. Mostrar el nombre de fabricante, no el código, en la tabla con la lista de productos
 
-## 5. AL MODIFICAR UN PRODUCTO (insert, delete y update) QUE SE MUESTRE AUTOMÁTICAMENTE LA LISTA DE PRODUCTOS
+Práctica guiada a realizar en clase.
+
+___
+
+## 4. Al modificar un producto (insert, delete y update) que se muestren automáticamente la lista de productos
 Para los alumnos.
+
 La lista que salga ordenada por código de producto desc....
+
+___
+## 5. En la tabla con la lista de productos añadir una columna para borrar y otra para actualizar producto.
+
+Si actualizo, saldrá un formulario con los datos del productos. Modifico las propiedades que quiero y actualizo todo el objeto producto.
+
+Se envían de nuevo todos los datos y se genera el objeto producto.
+
