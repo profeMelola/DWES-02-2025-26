@@ -168,6 +168,10 @@ Para que se ejecute directamente el servlet /index, tendremos que configurar en 
 
 Práctica guiada a realizar en clase.
 
+Dos formas:
+- Vista en clase con findAll.
+- Usando findById por cada código de fabricante.
+
 ___
 
 ## 4. Al modificar un producto (insert, delete y update) que se muestren automáticamente la lista de productos
