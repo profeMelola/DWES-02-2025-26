@@ -25,7 +25,7 @@ ___
 
 ### Ver un listado de libros con: Título, Autor (nombre), Fecha de publicación, y acciones Editar / Borrar.
 
-### Dar de alta un libro eligiendo el autor desde un <select>.
+### Dar de alta un libro eligiendo el autor desde un &lt;select&gt;.
 
 ### Editar un libro y actualizar sus datos.
 
