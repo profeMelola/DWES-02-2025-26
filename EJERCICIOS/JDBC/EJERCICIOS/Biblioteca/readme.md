@@ -24,11 +24,17 @@ ___
 ## Funcionalidades
 
 ### Ver un listado de libros con: Título, Autor (nombre), Fecha de publicación, y acciones Editar / Borrar.
+
 ### Dar de alta un libro eligiendo el autor desde un <select>.
+
 ### Editar un libro y actualizar sus datos.
+
 ### Borrar un libro con confirmación.
+
 ### Filtrar el listado por autor y/o por rango de años (ej.: 1960–1970).
+
 ### Ver y gestionar autores (listar/crear/editar/borrar).
+
 ### Si borro un autor, sus libros se eliminen automáticamente (comprobar ON DELETE CASCADE).
 
 ___ 
