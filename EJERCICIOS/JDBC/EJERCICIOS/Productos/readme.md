@@ -1,4 +1,4 @@
-# MI PRIMER APP JDBC
+# MI PRIMER APP JDBC - PRODUCTOS
 
 ## Añadir dependencia H2 en pom.xml
 
