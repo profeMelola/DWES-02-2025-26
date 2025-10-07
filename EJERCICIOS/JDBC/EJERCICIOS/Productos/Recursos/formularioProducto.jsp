@@ -25,13 +25,27 @@
 
 <div class="container">
     <div class="form-container">
-        <h2 class="text-center text-primary mb-4">➕ Nuevo Producto</h2>
+        <h2 class="text-center text-primary mb-4"><%= titulo %></h2>
 
         <%
             List<Fabricante> fabricantes = (List<Fabricante>) request.getAttribute("fabricantes");
         %>
 
         <form action="crear" method="post">
+            <!-- CÓDIGO DEL PRODUCTO -->
+            <div class="mb-3">
+                <label for="codigo" class="form-label">Código del producto</label>
+                <input type="number" id="codigo" name="codigo" class="form-control"
+                       required placeholder="Ej: 101"
+                       value="<%= esEdicion ? producto.getCodigo() : "" %>"
+                    <%= esEdicion ? "readonly" : "" %>>
+                <div class="form-text text-muted">
+                    El código identifica de forma única al producto en la base de datos.
+                    <% if (esEdicion) { %>
+                    (No se puede modificar)
+                    <% } %>
+                </div>
+            </div>            
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre del producto</label>
                 <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Ej: Portátil Lenovo">

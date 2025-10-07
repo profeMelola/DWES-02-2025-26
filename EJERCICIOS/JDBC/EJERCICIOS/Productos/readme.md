@@ -194,3 +194,10 @@ Si actualizo, saldrá un formulario con los datos del productos. Modifico las pr
 
 Se envían de nuevo todos los datos y se genera el objeto producto.
 
+## Nuevos recursos
+
+- welcome.jsp -> no tocar
+- productos.jsp -> hacer ajustes...
+- formularioProducto.jsp -> vale tanto para crear nuevo producto como editar. Hay que completarlo!
+
+
