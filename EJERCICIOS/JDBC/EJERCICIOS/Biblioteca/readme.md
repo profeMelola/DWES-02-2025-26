@@ -1,5 +1,7 @@
 # Biblioteca JDBC
 
+![alt text](image.png)
+
 Vas a desarrollar una aplicación web que gestione el catálogo de una biblioteca: autores y libros (con fecha de publicación). 
 
 La app permitirá listar, crear, actualizar y borrar registros.
