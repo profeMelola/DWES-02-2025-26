@@ -61,7 +61,7 @@
             </div>
 
             <div class="d-flex justify-content-between">
-                <a href="<%= request.getContextPath() %>/productos/listar" class="btn btn-secondary">⬅️ Cancelar</a>
+                <a href="<%= request.getContextPath() %>/productos/ver" class="btn btn-secondary">⬅️ Cancelar</a>
                 <button type="submit" class="btn btn-success">💾 Guardar producto</button>
             </div>
         </form>

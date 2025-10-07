@@ -26,7 +26,7 @@
 <div class="container mt-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="text-primary mb-0">📦 Productos disponibles</h2>
-    <a href="productos/nuevo" class="btn btn-success">➕ Añadir producto</a>
+    <a href="productos/crear" class="btn btn-success">➕ Añadir producto</a>
   </div>
 
   <%

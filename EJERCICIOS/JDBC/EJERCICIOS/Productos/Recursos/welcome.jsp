@@ -43,7 +43,7 @@
 <div class="container mt-5">
 
     <section class="hero">
-        <h1>🚛 LogísticaApp</h1>
+        <h1>LogísticaApp</h1>
         <p class="lead text-secondary">Gestión sencilla de productos y fabricantes</p>
     </section>
 
@@ -51,18 +51,18 @@
         <!-- Card de productos -->
         <div class="card text-center">
             <div class="card-body">
-                <h4 class="card-title text-primary">📦 Productos</h4>
+                <h4 class="card-title text-primary">Productos</h4>
                 <p class="card-text text-muted">Consulta, edita o añade nuevos productos del almacén.</p>
-                <a href="productos/listar" class="btn btn-primary btn-custom">Gestionar productos</a>
+                <a href="productos/ver" class="btn btn-primary btn-custom">Gestionar productos</a>
             </div>
         </div>
 
         <!-- Card de fabricantes -->
         <div class="card text-center">
             <div class="card-body">
-                <h4 class="card-title text-success">🏭 Fabricantes</h4>
+                <h4 class="card-title text-success">Fabricantes</h4>
                 <p class="card-text text-muted">Administra la lista de fabricantes disponibles.</p>
-                <a href="fabricantes/listar" class="btn btn-success btn-custom">Gestionar fabricantes</a>
+                <a href="fabricantes/ver" class="btn btn-success btn-custom">Gestionar fabricantes</a>
             </div>
         </div>
     </div>

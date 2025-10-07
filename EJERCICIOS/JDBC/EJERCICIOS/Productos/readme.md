@@ -175,14 +175,22 @@ Dos formas:
 ___
 
 ## 4. Al modificar un producto (insert, delete y update) que se muestren automáticamente la lista de productos
-Para los alumnos.
 
 La lista que salga ordenada por código de producto desc....
 
 ___
-## 5. En la tabla con la lista de productos añadir una columna para borrar y otra para actualizar producto.
+
+# FASE II
+
+![alt text](image-2.png)
+
+## En la tabla con la lista de productos añadir una columna para borrar y otra para actualizar producto.
+
+![alt text](image-3.png)
 
 Si actualizo, saldrá un formulario con los datos del productos. Modifico las propiedades que quiero y actualizo todo el objeto producto.
+
+![alt text](image-4.png)
 
 Se envían de nuevo todos los datos y se genera el objeto producto.
 
