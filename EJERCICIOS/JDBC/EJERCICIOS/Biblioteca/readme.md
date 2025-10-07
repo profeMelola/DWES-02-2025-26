@@ -18,6 +18,9 @@ Se proporciona el esquema de la base de datos H2 a cargar en memoria.
 | name      | 1,1       | publication_date |
 +-----------+           +------------------+
 
+1 libro está escrito por un único autor.
+1 autor tiene uno o más libros.
+
 ```
 ___ 
 
@@ -25,7 +28,7 @@ ___
 
 ### Ver un listado de libros con: Título, Autor (nombre), Fecha de publicación, y acciones Editar / Borrar.
 
-### Dar de alta un libro eligiendo el autor desde un &lt;select&gt;.
+### Dar de alta en la biblioteca un libro eligiendo el autor desde un &lt;select&gt;.
 
 ### Editar un libro y actualizar sus datos.
 
@@ -69,7 +72,7 @@ Pre-llenar valores si es edición.
 
 ___
 
-## Validaciones y reglas
+## Validaciones y reglas en el servidor
 
 ### Book:
 
@@ -175,3 +178,18 @@ JPQL (@Query("SELECT b FROM Book b JOIN b.author a WHERE a.name = :name"))
 ```
 
 o incluso consultas nativas SQL.
+
+___
+
+# Añade Cookies a tu aplicación
+
+## Cookie de idioma preferido (simulación de internacionalización)
+
+Permitir al usuario elegir el idioma (es/en) y recordarlo:
+- Al seleccionar idioma, guardas cookie lang con valor "es" o "en".
+- En cada JSP, al cargar, verificas la cookie y cambias los textos de los encabezados:
+```
+<h2><%= lang.equals("en") ? "Library Management" : "Gestión de Biblioteca" %></h2>
+```
+
+Próximamente internacionalización (i18n) en Spring Boot...
