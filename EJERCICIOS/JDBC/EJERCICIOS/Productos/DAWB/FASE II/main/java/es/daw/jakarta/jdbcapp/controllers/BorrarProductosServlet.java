@@ -1,6 +1,7 @@
 package es.daw.jakarta.jdbcapp.controllers;
 
 
+import es.daw.jakarta.jdbcapp.model.Producto;
 import es.daw.jakarta.jdbcapp.repository.GenericDAO;
 import es.daw.jakarta.jdbcapp.repository.ProductoDAO;
 import jakarta.servlet.ServletException;
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 @WebServlet("/productos/borrar")
 public class BorrarProductosServlet extends HttpServlet {
 
-    private GenericDAO daoP;
+    private GenericDAO<Producto,Integer> daoP;
 
     // MEJORA!!! METER LA CREACIÓN DEL DAO EN INIT!!!
 

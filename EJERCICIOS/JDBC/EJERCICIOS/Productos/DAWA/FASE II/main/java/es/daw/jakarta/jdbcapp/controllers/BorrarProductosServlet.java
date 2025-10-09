@@ -1,8 +1,10 @@
 package es.daw.jakarta.jdbcapp.controllers;
 
 
+import es.daw.jakarta.jdbcapp.model.Producto;
 import es.daw.jakarta.jdbcapp.repository.GenericDAO;
 import es.daw.jakarta.jdbcapp.repository.ProductoDAO;
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,16 +17,25 @@ import java.sql.SQLException;
 @WebServlet("/productos/borrar")
 public class BorrarProductosServlet extends HttpServlet {
 
-    private GenericDAO daoP;
+    private GenericDAO<Producto,Integer> daoP;
 
-    // MEJORA!!! METER LA CREACIÓN DEL DAO EN INIT!!!
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        try {
+            daoP = new ProductoDAO();
+        } catch (SQLException e) {
+            //throw new RuntimeException(e);
+            throw new ServletException("Error al inicializar los DAO",e);
+        }
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         try {
-            daoP = new ProductoDAO();
+
             int codigo = Integer.parseInt(request.getParameter("codigo"));
             daoP.delete(codigo);
 

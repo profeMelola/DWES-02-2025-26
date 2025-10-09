@@ -55,6 +55,8 @@ public class CrearProductosServlet extends HttpServlet {
             request.setAttribute("error", e.getMessage());
             //getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
             request.getRequestDispatcher("/error.jsp").forward(request, response);
+            //response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,e.getMessage());
+            return;
         }
 
         response.sendRedirect(request.getContextPath() + "/productos/ver");

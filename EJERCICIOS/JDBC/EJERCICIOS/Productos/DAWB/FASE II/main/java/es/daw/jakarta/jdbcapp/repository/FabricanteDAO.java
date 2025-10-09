@@ -60,4 +60,8 @@ public class FabricanteDAO implements GenericDAO<Fabricante, Integer> {
     public void delete(Integer integer) throws SQLException {
 
     }
+
+    public void kk(){
+        System.out.println("******* Fabricantes ******");
+    }
 }

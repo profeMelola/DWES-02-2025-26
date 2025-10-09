@@ -27,6 +27,6 @@
 
 <body>
 <p>${error}</p>
-<a href='<%=request.getContextPath()%>/index.jsp'>Volver</a>
+<a href='<%=request.getContextPath()%>/productos/ver'>Volver</a>
 </body>
 </html>

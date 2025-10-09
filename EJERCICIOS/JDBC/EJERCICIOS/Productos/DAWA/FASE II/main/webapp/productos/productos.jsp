@@ -58,7 +58,7 @@
                 <td><%= p.getPrecio() %></td>
                 <td><%= nombreFab %></td>
                 <td>
-                    <form action="<%=request.getContextPath()%>/productos/editar" method="get">
+                    <form action="<%=request.getContextPath()%>/productos/actualizar" method="get">
                         <input type="hidden" name="codigo" value="<%= p.getCodigo() %>">
                         <button type="submit" class="btn btn-warning btn-sm">✏️</button>
                     </form>
