@@ -35,6 +35,22 @@ productos.stream()
 
 ```
 
+## Ejemplo con reduce
+
+```
+        // Lista de números
+        List<Integer> numeros = Arrays.asList(2, 4, 6, 8, 10);
+
+        // Usando reduce con la interfaz funcional
+        int resultado = numeros.stream()
+                .reduce(0, (a, b) -> a + b); // 0 es el valor inicial (identidad)
+
+        System.out.println("La suma total es: " + resultado);
+
+        // (((((0 + 2) + 4) + 6) + 8) + 10) = 30
+```
+
+
 ## Resumen
 
 | Tipo                | Función     | Método     | Ejemplo común       |
