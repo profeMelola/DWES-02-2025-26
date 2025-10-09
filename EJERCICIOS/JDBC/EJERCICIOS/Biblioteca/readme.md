@@ -95,18 +95,6 @@ CRUD JDBC, Servlets y JSP. No medir el domino de SQL avanzado.
 
 ## Por ejemplo: filtrado de producto por año
 
-### Enfoque SQL avanzado
-
-```
-SELECT b.id, b.title, b.publication_date, a.id AS author_id, a.name AS author_name
-FROM Book b
-LEFT JOIN Author a ON a.id = b.author_id
-WHERE ( ? IS NULL OR a.id = ? )
-  AND ( ? IS NULL OR EXTRACT(YEAR FROM b.publication_date) >= ? )
-  AND ( ? IS NULL OR EXTRACT(YEAR FROM b.publication_date) <= ? )
-ORDER BY b.publication_date DESC, b.title ASC;
-
-```
 
 ### Enfoque SQL simplificado
 Mantiene el SQL fácil y entendible.
@@ -152,6 +140,42 @@ Para mostrar el nombre del autor en la JSP:
 
 ```
 <td><%= Utils.obtenerNombreAutor(autores, book.getAuthorId()) %></td>
+
+```
+
+### Enfoque SQL avanzado
+
+```
+SELECT b.id, b.title, b.publication_date, a.id AS author_id, a.name AS author_name
+FROM Book b
+LEFT JOIN Author a ON a.id = b.author_id
+WHERE ( ? IS NULL OR a.id = ? )
+  AND ( ? IS NULL OR EXTRACT(YEAR FROM b.publication_date) >= ? )
+  AND ( ? IS NULL OR EXTRACT(YEAR FROM b.publication_date) <= ? )
+ORDER BY b.publication_date DESC, b.title ASC;
+
+```
+Esto requiere una clase auxiliar DTO:
+
+```
+public class BookWithAuthor {
+    private Long id;
+    private String title;
+    private LocalDate publicationDate;
+    private Long authorId;
+    private String authorName;
+
+    // constructor completo + getters/setters
+}
+
+```
+
+Usuaríamos en la interface GenericDAO dicho DTO:
+
+```
+public interface BookDAO extends GenericDAO<Book, Long> {
+    List<BookWithAuthor> findAllWithAuthor() throws SQLException;
+}
 
 ```
 
