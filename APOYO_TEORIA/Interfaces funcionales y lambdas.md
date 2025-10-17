@@ -8,7 +8,13 @@ Se procesa los datos como si fuera un flujo.
 
 <img width="984" height="425" alt="image" src="https://github.com/user-attachments/assets/a78bce0e-47bc-413c-a0e3-84e8f8979536" />
 
-La API Stream de Java proporciona una serie de operaciones que se pueden realizar en un flujo de datos. Estas operaciones se pueden clasificar en tres categorías: operaciones intermedias (Intermediate operations), operaciones terminales (Terminal operations) y operaciones de cortocircuito (Short-circuit operations).
+La API Stream de Java proporciona una serie de operaciones que se pueden realizar en un flujo de datos. 
+
+Estas operaciones se pueden clasificar en tres categorías: 
+
+- operaciones intermedias (Intermediate operations)
+- operaciones terminales (Terminal operations)
+- operaciones de cortocircuito (Short-circuit operations).
 
 <img width="1002" height="520" alt="image" src="https://github.com/user-attachments/assets/7025d1ae-adef-4637-971e-8424bde9e362" />
 
