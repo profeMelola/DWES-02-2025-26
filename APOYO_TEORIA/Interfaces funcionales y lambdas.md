@@ -1,5 +1,18 @@
 # Chuleta de Interfaces Funcionales y Lambdas en Java
 
+La programación funcional en Java es un enfoque de programación que se basa en el uso de funciones y expresiones en lugar de utilizar instrucciones imperativas. 
+
+Java 8 introdujo características de programación funcional en el lenguaje, como las expresiones lambda y la API Stream, que proporcionan herramientas para trabajar de manera más concisa y expresiva con colecciones de datos. 
+
+Se procesa los datos como si fuera un flujo.
+
+<img width="984" height="425" alt="image" src="https://github.com/user-attachments/assets/a78bce0e-47bc-413c-a0e3-84e8f8979536" />
+
+La API Stream de Java proporciona una serie de operaciones que se pueden realizar en un flujo de datos. Estas operaciones se pueden clasificar en tres categorías: operaciones intermedias (Intermediate operations), operaciones terminales (Terminal operations) y operaciones de cortocircuito (Short-circuit operations).
+
+<img width="1002" height="520" alt="image" src="https://github.com/user-attachments/assets/7025d1ae-adef-4637-971e-8424bde9e362" />
+
+
 ## Qué es una interfaz funcional
 
 Una **interfaz funcional** tiene **un único método abstracto**.  
